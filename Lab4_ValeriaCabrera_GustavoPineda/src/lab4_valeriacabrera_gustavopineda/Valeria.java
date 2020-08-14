@@ -21,33 +21,29 @@ public class Valeria {
         ArrayList<Criminales> Criminal = new ArrayList();
         ArrayList<Agentes> Agente = new ArrayList();
         
-        System.out.println("Eliminar");
-        System.out.println("1) Eliminar Delito");
-        System.out.println("2) Eliminar Criminal");
-        System.out.println("3) Eliminar Agente");
-        int eli = input.nextInt();
+        //case de listar
         
-        if (eli==1) {
-            
-            System.out.println("Ingrese el numero del delito que desea eliminar: ");
-            int del = input.nextInt();
-            
-            Delitos.remove(del);
-            
-            
-        }else if(eli==2){
-            
-            System.out.println("Ingrese el numero del criminal que desea eliminar: ");
-            int cri = input.nextInt();
-            
-            Criminal.remove(cri);
-            
-        }else if(eli==3){
-            
-            System.out.println("Ingrese el numero del agente que desea eliminar: ");
-            int ag = input.nextInt();
-            
-            Agente.remove(ag);
+        System.out.println("Listar");
+        System.out.println("1) Listar Delitos");
+        System.out.println("2) Listar Criminales");
+        System.out.println("3) Listar Agentes");
+        int list = input.nextInt();
+        
+        if(list==1){
+            System.out.println("DELITOS");
+            for (int i = 0; i < Delitos.size(); i++) {
+                System.out.println(Delitos.indexOf(i)+" - "+Delitos.get(i));
+            }
+        }else if(list==2){
+            System.out.println("CRIMINALES");
+            for (int i = 0; i < Criminal.size(); i++) {
+                System.out.println(Criminal.indexOf(i)+" - "+Criminal.get(i));
+            }
+        }else if(list==3){
+            System.out.println("AGENTES");
+            for (int i = 0; i < Agente.size(); i++) {
+                System.out.println(Agente.indexOf(i)+" - "+Agente.get(i));
+            }
         }
         
     }
