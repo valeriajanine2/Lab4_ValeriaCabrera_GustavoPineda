@@ -50,6 +50,7 @@ public class Lab4_ValeriaCabrera_GustavoPineda {
             }
             switch (opcion) {
                 case 1:
+                    //Menu principal
                     int opcionM2 = 0;
                     while (opcionM2 != 4) {
                         boolean flagM2 = true;
@@ -72,6 +73,7 @@ public class Lab4_ValeriaCabrera_GustavoPineda {
                                 }
                             }
                         }
+                        //Switch de cada opcion del menu
                         switch (opcionM2) {
                             case 1:
                                 System.out.println("Agregar delito");
@@ -213,33 +215,223 @@ public class Lab4_ValeriaCabrera_GustavoPineda {
                                             }
                                         }
                                         System.out.println("Ingrese el objeto que fue hurtado");
-                                        String objeto=input.next();
+                                        String objeto = input.next();
                                         System.out.println("Ingrese el valor de lo hurtado");
-                                        double valor=input.nextDouble();
-                                        Delitos.add(new Hurto(objeto,valor,nomP, ID, celda, desc, nomVic, culpable, sent, fechDel, pais, numD));
+                                        double valor = input.nextDouble();
+                                        Delitos.add(new Hurto(objeto, valor, nomP, ID, celda, desc, nomVic, culpable, sent, fechDel, pais, numD));
+
                                     }
-                                   
+                                    if (opcionDM == 2) {
+                                        System.out.println("Ingrese nombre del policia");
+                                        String nomP = input.next();
+                                        System.out.println("Ingrese el numero de identificacion del policio");
+                                        long ID = input.nextLong();
+                                        System.out.println("Ingrese el numero de celda");
+                                        int celda = input.nextInt();
+                                        boolean flag5 = true;
+                                        while (flag5) {
+                                            try {
+                                                celda = Integer.parseInt(input.nextLine());
+                                                flag5 = false;
+                                            } catch (NumberFormatException e5) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Ingrese edificacion");
+                                        String edificacion = input.next();
+                                        System.out.println("Ingrese cantidad de pisos por ejemplo 'pisos,1,2,3'");
+                                        String pisos = input.next();
+                                        System.out.println("Ingrese nombre del dueño del edificio");
+                                        String nomD = input.next();
+                                        Delitos.add(new Vandalismo(edificacion, pisos, nomD, nomP, ID, celda, desc, nomVic, culpable, sent, fechDel, pais, numD));
+                                    }
+                                    if (opcionDM == 3) {
+                                        System.out.println("Ingrese nombre del policia");
+                                        String nomP = input.next();
+                                        System.out.println("Ingrese el numero de identificacion del policio");
+                                        long ID = input.nextLong();
+                                        System.out.println("Ingrese el numero de celda");
+                                        int celda = input.nextInt();
+                                        boolean flag5 = true;
+                                        while (flag5) {
+                                            try {
+                                                celda = Integer.parseInt(input.nextLine());
+                                                flag5 = false;
+                                            } catch (NumberFormatException e5) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Ingrese nombre del solicitante");
+                                        String nomS = input.next();
+                                        Delitos.add(new Prostitucion(nomS, nomP, ID, celda, desc, nomVic, culpable, sent, fechDel, pais, numD));
+
+                                    }
+
                                 } else if (opcion2 == 2) {
-                                    System.out.println("Ingrese nivel de gravedad");
-                                    int gravedad = input.nextInt();
-                                    boolean flag6 = true;
-                                    while (flag6) {
+                                    System.out.println("Elija el tipo de delito");
+                                    System.out.println("1. Terrorismo");
+                                    System.out.println("2. Asesinato");
+                                    System.out.println("3. Violacion");
+                                    System.out.println("4. Secuestro");
+                                    System.out.println("5. Trafico de Drogas");
+                                    int opcionDG = input.nextInt();
+                                    try {
+                                        opcionDG = Integer.parseInt(input.nextLine());
+                                    } catch (NumberFormatException e34) {
+                                        System.out.println("El dato debe de ser numero entero");
+                                    }
+                                    while (opcionDG <= 0 || opcionDG > 5) {
                                         try {
-                                            gravedad = Integer.parseInt(input.nextLine());
-                                            flag6 = false;
-                                        } catch (NumberFormatException e6) {
-                                            System.out.println("Ingrese un numero entero");
-                                        }
-                                        while (gravedad < 0 || gravedad > 5) {
-                                            System.out.println("El dato debe de ser entre 1 y 5");
-                                        }
-                                        try {
-                                            gravedad = Integer.parseInt(input.nextLine());
-                                        } catch (NumberFormatException e6) {
-                                            System.out.println("Ingrese un numero entero");
+                                            System.out.println("El numero debe de ser 1,2 o 3");
+                                            opcionDG = Integer.parseInt(input.nextLine());
+                                        } catch (NumberFormatException e45) {
+                                            System.out.println("El dato debe de ser numero entero");
                                         }
                                     }
-                                    Delitos.add(new DelitoGrave(gravedad, desc, nomVic, culpable, sent, fechDel, pais, numD));
+                                    if (opcionDG == 1) {
+                                        System.out.println("Ingrese nivel de gravedad");
+                                        int gravedad = input.nextInt();
+                                        boolean flag6 = true;
+                                        while (flag6) {
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                                flag6 = false;
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                            while (gravedad < 0 || gravedad > 5) {
+                                                System.out.println("El dato debe de ser entre 1 y 5");
+                                            }
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Ingrese artefacto");
+                                        String artefacto = input.next();
+
+                                        System.out.println("Ingrese numero de victimas");
+                                        int victimas = input.nextInt();
+                                        boolean flag78 = true;
+                                        while (flag78) {
+                                            try {
+                                                victimas = Integer.parseInt(input.nextLine());
+                                                flag78 = false;
+                                            } catch (NumberFormatException e89) {
+                                                System.out.println("Debe de ser un numero entero");
+                                            }
+                                        }
+                                        Delitos.add(new Terrorismo(artefacto, victimas, gravedad, desc, nomVic, culpable, sent, fechDel, pais, numD));
+                                    }
+                                    if (opcionDG == 2) {
+                                        System.out.println("Ingrese nivel de gravedad");
+                                        int gravedad = input.nextInt();
+                                        boolean flag6 = true;
+                                        while (flag6) {
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                                flag6 = false;
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                            while (gravedad < 0 || gravedad > 5) {
+                                                System.out.println("El dato debe de ser entre 1 y 5");
+                                            }
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Ingrese el arma que se uso");
+                                        String arma=input.next();
+                                        System.out.println("Ingrese cantidad de cuerpos");
+                                        int cuerpos = input.nextInt();
+                                        boolean flag79 = true;
+                                        while (flag79) {
+                                            try {
+                                                cuerpos = Integer.parseInt(input.nextLine());
+                                                flag79 = false;
+                                            } catch (NumberFormatException e89) {
+                                                System.out.println("Debe de ser un numero entero");
+                                            }
+                                        }
+                                        Delitos.add(new Asesinato(arma, cuerpos, gravedad, desc, nomVic, culpable, sent, fechDel, pais, numD));
+                                    }
+                                    if (opcionDG==3) {
+                                        System.out.println("Ingrese nivel de gravedad");
+                                        int gravedad = input.nextInt();
+                                        boolean flag6 = true;
+                                        while (flag6) {
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                                flag6 = false;
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                            while (gravedad < 0 || gravedad > 5) {
+                                                System.out.println("El dato debe de ser entre 1 y 5");
+                                            }
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Ingrese edad de la victima");
+                                        int edad = input.nextInt();
+                                        boolean flag79 = true;
+                                        while (flag79) {
+                                            try {
+                                                edad = Integer.parseInt(input.nextLine());
+                                                flag79 = false;
+                                            } catch (NumberFormatException e89) {
+                                                System.out.println("Debe de ser un numero entero");
+                                            }
+                                        }
+                                        Delitos.add(new Violacion(edad, gravedad, desc, nomVic, culpable, sent, fechDel, pais, numD));
+                                    }
+                                    if (opcionDG==4) {
+                                        System.out.println("Ingrese nivel de gravedad");
+                                        int gravedad = input.nextInt();
+                                        boolean flag6 = true;
+                                        while (flag6) {
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                                flag6 = false;
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                            while (gravedad < 0 || gravedad > 5) {
+                                                System.out.println("El dato debe de ser entre 1 y 5");
+                                            }
+                                            try {
+                                                gravedad = Integer.parseInt(input.nextLine());
+                                            } catch (NumberFormatException e6) {
+                                                System.out.println("Ingrese un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Ingrese tiempo retenido");
+                                        int tiempoR = input.nextInt();
+                                        boolean flag80 = true;
+                                        while (flag80) {
+                                            try {
+                                                tiempoR = Integer.parseInt(input.nextLine());
+                                                flag80 = false;
+                                            } catch (NumberFormatException e89) {
+                                                System.out.println("Debe de ser un numero entero");
+                                            }
+                                        }
+                                        System.out.println("Fue devuelto vivo o muerto?");
+                                        System.out.println("1. vivo");
+                                        System.out.println("2. muerto");
+                                        int opcionM4=input.nextInt();
+                                        boolean flag16=true;
+                                        while(){
+                                            
+                                        }
+                                    }
                                 }
                                 break;
                             case 2:
@@ -290,6 +482,7 @@ public class Lab4_ValeriaCabrera_GustavoPineda {
                                 Criminal.add(new Criminales(nomC, edad, paisR, encarcelado, descC));
                                 break;
                             case 3:
+
                                 break;
                         }
                     }
@@ -297,10 +490,57 @@ public class Lab4_ValeriaCabrera_GustavoPineda {
                 case 2:
                     break;
                 case 3:
+                    System.out.println("Eliminar");
+                    System.out.println("1) Eliminar Delito");
+                    System.out.println("2) Eliminar Criminal");
+                    System.out.println("3) Eliminar Agente");
+                    int eli = input.nextInt();
+
+                    if (eli == 1) {
+
+                        System.out.println("Ingrese el numero del delito que desea eliminar: ");
+                        int del = input.nextInt();
+
+                        Delitos.remove(del);
+
+                    } else if (eli == 2) {
+
+                        System.out.println("Ingrese el numero del criminal que desea eliminar: ");
+                        int cri = input.nextInt();
+
+                        Criminal.remove(cri);
+
+                    } else if (eli == 3) {
+
+                        System.out.println("Ingrese el numero del agente que desea eliminar: ");
+                        int ag = input.nextInt();
+
+                        Agente.remove(ag);
+                    }
+
                     break;
                 case 4:
-                    for (int i = 0; i < Delitos.size(); i++) {
-                        System.out.println(Delitos.get(i));
+                    System.out.println("Listar");
+                    System.out.println("1) Listar Delitos");
+                    System.out.println("2) Listar Criminales");
+                    System.out.println("3) Listar Agentes");
+                    int list = input.nextInt();
+
+                    if (list == 1) {
+                        System.out.println("DELITOS");
+                        for (int i = 0; i < Delitos.size(); i++) {
+                            System.out.println(Delitos.indexOf(i) + " - " + Delitos.get(i));
+                        }
+                    } else if (list == 2) {
+                        System.out.println("CRIMINALES");
+                        for (int i = 0; i < Criminal.size(); i++) {
+                            System.out.println(Criminal.indexOf(i) + " - " + Criminal.get(i));
+                        }
+                    } else if (list == 3) {
+                        System.out.println("AGENTES");
+                        for (int i = 0; i < Agente.size(); i++) {
+                            System.out.println(Agente.indexOf(i) + " - " + Agente.get(i));
+                        }
                     }
                     break;
             }
