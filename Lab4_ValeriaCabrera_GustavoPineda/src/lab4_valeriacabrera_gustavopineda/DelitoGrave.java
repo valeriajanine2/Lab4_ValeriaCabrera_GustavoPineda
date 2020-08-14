@@ -17,7 +17,7 @@ public class DelitoGrave extends Delito{
         super();
     }
 
-    public DelitoGrave(int gravedad, String descripcion, String nomVictima, boolean culpable, int sentencia, String fecha, String pais, int numDelito) {
+    public DelitoGrave(int gravedad, String descripcion, String nomVictima, boolean culpable, String sentencia, String fecha, String pais, int numDelito) {
         super(descripcion, nomVictima, culpable, sentencia, fecha, pais, numDelito);
         setGravedad(gravedad);
     }

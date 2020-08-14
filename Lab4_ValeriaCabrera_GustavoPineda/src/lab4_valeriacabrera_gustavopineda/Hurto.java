@@ -18,7 +18,7 @@ public class Hurto extends DelitoMenor{
         super();
     }
 
-    public Hurto(String objeto, double valor, String policia, long ID, int celda, String descripcion, String nomVictima, boolean culpable, int sentencia, String fecha, String pais, int numDelito) {
+    public Hurto(String objeto, double valor, String policia, long ID, int celda, String descripcion, String nomVictima, boolean culpable, String sentencia, String fecha, String pais, int numDelito) {
         super(policia, ID, celda, descripcion, nomVictima, culpable, sentencia, fecha, pais, numDelito);
         this.objeto = objeto;
         this.valor = valor;
@@ -38,11 +38,6 @@ public class Hurto extends DelitoMenor{
 
     public void setValor(double valor) {
         this.valor = valor;
-    }
-
-    @Override
-    public String toString() {
-        return "Hurto{" + "objeto=" + objeto + ", valor=" + valor + '}';
     }
     
     

@@ -17,7 +17,7 @@ public class Prostitucion extends DelitoMenor {
         super();
     }
 
-    public Prostitucion(String solicitante, String policia, long ID, int celda, String descripcion, String nomVictima, boolean culpable, int sentencia, String fecha, String pais, int numDelito) {
+    public Prostitucion(String solicitante, String policia, long ID, int celda, String descripcion, String nomVictima, boolean culpable, String sentencia, String fecha, String pais, int numDelito) {
         super(policia, ID, celda, descripcion, nomVictima, culpable, sentencia, fecha, pais, numDelito);
         this.solicitante = solicitante;
     }

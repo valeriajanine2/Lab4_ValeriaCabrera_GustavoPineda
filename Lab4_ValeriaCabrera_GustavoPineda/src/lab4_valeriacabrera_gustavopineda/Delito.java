@@ -14,7 +14,7 @@ public class Delito {
     private String descripcion;
     private String nomVictima;
     private boolean culpable;
-    private int sentencia;
+    private String sentencia;
     private String fecha;
     private String pais;
     private int numDelito;
@@ -22,7 +22,7 @@ public class Delito {
     public Delito() {
     }
 
-    public Delito(String descripcion, String nomVictima, boolean culpable, int sentencia, String fecha, String pais, int numDelito) {
+    public Delito(String descripcion, String nomVictima, boolean culpable, String sentencia, String fecha, String pais, int numDelito) {
         this.descripcion = descripcion;
         this.nomVictima = nomVictima;
         this.culpable = culpable;
@@ -56,11 +56,11 @@ public class Delito {
         this.culpable = culpable;
     }
 
-    public int getSentencia() {
+    public String getSentencia() {
         return sentencia;
     }
 
-    public void setSentencia(int sentencia) {
+    public void setSentencia(String sentencia) {
         this.sentencia = sentencia;
     }
 

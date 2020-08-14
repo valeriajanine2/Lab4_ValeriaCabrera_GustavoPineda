@@ -19,7 +19,7 @@ public class DelitoMenor extends Delito{
         super();
     }
 
-    public DelitoMenor(String policia, long ID, int celda, String descripcion, String nomVictima, boolean culpable, int sentencia, String fecha, String pais, int numDelito) {
+    public DelitoMenor(String policia, long ID, int celda, String descripcion, String nomVictima, boolean culpable, String sentencia, String fecha, String pais, int numDelito) {
         super(descripcion, nomVictima, culpable, sentencia, fecha, pais, numDelito);
         this.policia = policia;
         this.ID = ID;
