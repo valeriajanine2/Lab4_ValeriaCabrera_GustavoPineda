@@ -42,6 +42,11 @@ public class Secuestradores extends Agentes{
     public String toString() {
         return "Secuestradores{" + "victima=" + victima + ", rescate=" + rescate + '}';
     }
+
+    @Override
+    void cometerDelito() {
+        System.out.println("Se ha secuestrado a "+victima+" y hay recompensa de "+rescate);
+    }
     
     
     

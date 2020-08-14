@@ -9,10 +9,13 @@ package lab4_valeriacabrera_gustavopineda;
  *
  * @author Usuario
  */
-public class Agentes extends Criminales {
+public abstract class Agentes extends Criminales {
 
     public Agentes() {
     }
+    
+    abstract void cometerDelito();
+    
     
     
     

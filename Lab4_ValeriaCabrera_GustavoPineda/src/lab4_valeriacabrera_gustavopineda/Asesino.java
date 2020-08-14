@@ -42,6 +42,11 @@ public class Asesino extends Agentes{
     public String toString() {
         return "Asesino{" + "victima=" + victima + ", arma=" + arma + '}';
     }
+
+    @Override
+    void cometerDelito() {
+        System.out.println("Se asesinó a "+victima+" con un/a "+arma);
+    }
     
     
     

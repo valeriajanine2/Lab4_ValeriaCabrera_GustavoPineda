@@ -55,6 +55,11 @@ public class Terroristas extends Agentes {
         return "Terroristas{" + "pais=" + pais + ", ciudad=" + ciudad + ", metodo=" + metodo + '}';
     }
 
+    @Override
+    void cometerDelito() {
+        System.out.println("Ocurrió un acto terroriste en "+pais+", "+ciudad+"");
+    }
+
     
     
     
