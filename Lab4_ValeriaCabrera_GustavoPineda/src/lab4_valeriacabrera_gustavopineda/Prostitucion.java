@@ -32,7 +32,7 @@ public class Prostitucion extends DelitoMenor {
 
     @Override
     public String toString() {
-        return "Prostitucion{" + "solicitante=" + solicitante + '}';
+        return "Detalles de la Prostitucion{"+super.toString() + ", Solicitante: " + solicitante + '}';
     }
     
     

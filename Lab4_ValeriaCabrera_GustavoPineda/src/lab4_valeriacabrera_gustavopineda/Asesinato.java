@@ -42,7 +42,7 @@ public class Asesinato extends DelitoGrave{
 
     @Override
     public String toString() {
-        return "Asesinato{" + "arma=" + arma + ", cuerpos=" + cuerpos + '}';
+        return "Detalles del Asesinato{" +super.toString()+ ", Arma: " + arma + ", Cuerpos: " + cuerpos + '}';
     }
     
     

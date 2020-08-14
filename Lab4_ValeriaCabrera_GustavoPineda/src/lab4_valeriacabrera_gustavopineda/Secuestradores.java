@@ -40,7 +40,7 @@ public class Secuestradores extends Agentes{
 
     @Override
     public String toString() {
-        return "Secuestradores{" + "victima=" + victima + ", rescate=" + rescate + '}';
+        return "Secuestrador{" + "Victima: " + victima + ", Rescate: " + rescate + '}';
     }
 
     @Override

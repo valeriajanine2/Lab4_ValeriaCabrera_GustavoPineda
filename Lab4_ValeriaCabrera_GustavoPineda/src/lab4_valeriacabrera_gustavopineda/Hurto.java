@@ -39,6 +39,12 @@ public class Hurto extends DelitoMenor{
     public void setValor(double valor) {
         this.valor = valor;
     }
+
+    @Override
+    public String toString() {
+        return "Detalles del Hurto{"+super.toString()+ ", Objeto: " + objeto + ", Valor: " + valor + '}';
+    }
+    
     
     
     

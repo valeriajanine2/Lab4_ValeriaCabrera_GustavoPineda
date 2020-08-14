@@ -42,7 +42,7 @@ public class Terrorismo extends DelitoGrave {
 
     @Override
     public String toString() {
-        return "Terrorismo{" + "artefacto=" + artefacto + ", victimas=" + victimas + '}';
+        return "Terrorismo{"+super.toString() + "artefacto=" + artefacto + ", victimas=" + victimas + '}';
     }
     
     

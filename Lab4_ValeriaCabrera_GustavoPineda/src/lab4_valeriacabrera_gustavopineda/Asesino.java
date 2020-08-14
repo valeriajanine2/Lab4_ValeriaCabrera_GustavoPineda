@@ -40,7 +40,7 @@ public class Asesino extends Agentes{
 
     @Override
     public String toString() {
-        return "Asesino{" + "victima=" + victima + ", arma=" + arma + '}';
+        return "Asesino{" + "Victima: " + victima + ", Arma: " + arma + '}';
     }
 
     @Override

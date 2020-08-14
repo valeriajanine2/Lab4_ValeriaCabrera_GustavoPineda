@@ -52,12 +52,12 @@ public class Terroristas extends Agentes {
 
     @Override
     public String toString() {
-        return "Terroristas{" + "pais=" + pais + ", ciudad=" + ciudad + ", metodo=" + metodo + '}';
+        return "Terrorista{" + "Pais: " + pais + ", Ciudad: " + ciudad + ", Metodo: " + metodo + '}';
     }
 
     @Override
     void cometerDelito() {
-        System.out.println("Ocurrió un acto terroriste en "+pais+", "+ciudad+"");
+        System.out.println("Ocurrió un acto terrorista en "+pais+", "+ciudad+"");
     }
 
     

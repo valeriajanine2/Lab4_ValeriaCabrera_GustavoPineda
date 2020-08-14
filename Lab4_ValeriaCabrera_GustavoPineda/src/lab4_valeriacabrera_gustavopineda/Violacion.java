@@ -32,7 +32,7 @@ public class Violacion extends DelitoGrave{
 
     @Override
     public String toString() {
-        return "Violacion{" + "edad=" + edad + '}';
+        return "Detalles de la Violacion{"+super.toString() + ", Edad=" + edad + '}';
     }
     
     

@@ -52,7 +52,7 @@ public class Vandalismo extends DelitoMenor {
 
     @Override
     public String toString() {
-        return "Vandalismo{" + "edificacion=" + edificacion + ", pisos=" + pisos + ", dueno=" + dueno + '}';
+        return "Detalles del Vandalismo{"+super.toString()+ ", edificacion=" + edificacion + ", pisos=" + pisos + ", dueno=" + dueno + '}';
     }
     
     

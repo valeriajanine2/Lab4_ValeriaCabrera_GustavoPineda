@@ -42,7 +42,7 @@ public class Trafico extends DelitoGrave {
 
     @Override
     public String toString() {
-        return "Trafico{" + "droga=" + droga + ", cantidad=" + cantidad + '}';
+        return "Detalles del Trafico{"+super.toString() + ", Droga: " + droga + ", Cantidad: " + cantidad + '}';
     }
     
     

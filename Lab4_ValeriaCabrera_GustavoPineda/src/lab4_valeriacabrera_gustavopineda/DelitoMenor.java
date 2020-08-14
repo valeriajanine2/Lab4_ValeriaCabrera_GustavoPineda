@@ -52,7 +52,7 @@ public class DelitoMenor extends Delito{
 
     @Override
     public String toString() {
-        return "DelitoMenor{" + "policia=" + policia + ", ID=" + ID + ", celda=" + celda + '}';
+        return "DelitoMenor{"+super.toString() + "Policia: " + policia + ", ID: " + ID + ", Celda: " + celda + '}';
     }
     
     

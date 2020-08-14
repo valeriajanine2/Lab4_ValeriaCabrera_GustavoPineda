@@ -35,7 +35,7 @@ public class DelitoGrave extends Delito{
 
     @Override
     public String toString() {
-        return "DelitoGrave{" + "gravedad=" + gravedad + '}';
+        return "DelitoGrave{"+super.toString() + "Gravedad: " + gravedad + '}';
     }
     
     

@@ -42,7 +42,7 @@ public class Secuestro extends DelitoGrave {
 
     @Override
     public String toString() {
-        return "Secuestro{" + "retenido=" + retenido + ", vivo=" + vivo + '}';
+        return "Detalles del Secuestro{"+super.toString() + ", Retenido: " + retenido + ", Vivo: " + vivo + '}';
     }
     
     

@@ -5,11 +5,31 @@
  */
 package lab4_valeriacabrera_gustavopineda;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Usuario
  */
 public class Organizacion {
+    
+    ArrayList<Criminales> crimi = new ArrayList();
+
+    public Organizacion() {
+    }
+
+    public ArrayList<Criminales> getCrimi() {
+        return crimi;
+    }
+
+    public void setCrimi(ArrayList<Criminales> crimi) {
+        this.crimi = crimi;
+    }
+
+    @Override
+    public String toString() {
+        return "Organizacion{" + "crimi=" + crimi + '}';
+    }
     
     
     
